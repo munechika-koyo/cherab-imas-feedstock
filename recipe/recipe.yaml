@@ -10,6 +10,7 @@ source:
   sha256: dfdb7f28ff52e6b03735c7d72ce5737b75bbd6dc62567d670c6791ba7e4bb571
   patches:
     - fix_timeout.patch
+    - fix_type_annotations.patch
 
 build:
   skip:
