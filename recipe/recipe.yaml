@@ -1,6 +1,6 @@
 context:
   name: cherab-imas
-  version: "0.3.0"
+  version: "0.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/cherab/imas/archive/v${{ version }}.tar.gz
-  sha256: 49c940f9eb126b6b8696fcd1e6530ca17edecdccd9a36c60f00d9c19bc45e7bb
+  sha256: dfdb7f28ff52e6b03735c7d72ce5737b75bbd6dc62567d670c6791ba7e4bb571
   patches:
     - fix_timeout.patch
 
@@ -19,7 +19,7 @@ build:
     content: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
     env:
       SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
-  number: 1
+  number: 0
 
 requirements:
   build:
