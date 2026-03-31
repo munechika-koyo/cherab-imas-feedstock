@@ -1,9 +1,8 @@
 context:
-  name: cherab-imas
   version: "0.4.0"
 
 package:
-  name: ${{ name|lower }}
+  name: cherab-imas
   version: ${{ version }}
 
 source:
@@ -29,7 +28,8 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - hatch-cython >=0.6.0rc0
+        - hatchling
+        - hatch-cython >=0.6.0
         - hatch-vcs
         - cherab
         - if: osx
@@ -38,7 +38,8 @@ requirements:
   host:
     - python
     - pip
-    - hatch-cython >=0.6.0rc0
+    - hatchling
+    - hatch-cython >=0.6.0
     - hatch-vcs
     - cherab
     - if: osx
@@ -58,6 +59,7 @@ tests:
         - cherab.imas.ggd
         - cherab.imas.ids
         - cherab.imas.math
+        - cherab.imas.observer
         - cherab.imas.plasma
         - cherab.imas.wall
       pip_check: false
