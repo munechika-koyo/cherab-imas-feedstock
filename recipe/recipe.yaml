@@ -48,6 +48,7 @@ requirements:
   run:
     - python
     - imas-python
+    - typing-extensions >=4.5 # Until Python 3.12 is the minimum supported version
     - pooch
     - rich
 
