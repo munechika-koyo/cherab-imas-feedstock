@@ -1,5 +1,5 @@
 context:
-  version: "0.4.0"
+  version: "0.4.1"
 
 package:
   name: cherab-imas
@@ -7,10 +7,9 @@ package:
 
 source:
   url: https://github.com/cherab/imas/archive/v${{ version }}.tar.gz
-  sha256: dfdb7f28ff52e6b03735c7d72ce5737b75bbd6dc62567d670c6791ba7e4bb571
+  sha256: 69ee8b36631de750d55b6c754246b63f1cd66d25c780dc301188f8ddd3ed447d
   patches:
     - fix_timeout.patch
-    - fix_type_annotations.patch
 
 build:
   skip:
@@ -52,6 +51,7 @@ requirements:
     - typing-extensions >=4.5 # Until Python 3.12 is the minimum supported version
     - pooch
     - rich
+    - plotly
 
 tests:
   - python:
